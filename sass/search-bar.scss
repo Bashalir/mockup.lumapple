@@ -1,0 +1,37 @@
+.search-bar {
+    display: flex;
+    font-size: $h5;
+    flex: 1;
+    min-height: 45px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: $background-100;
+    box-shadow: inset -4px -4px 11px $shadow-100, inset 4px 4px 11px $shadow-200;
+    border-radius: 24px;
+  
+    &__input {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+  
+      input {
+        display: inline-block;
+        border: none;
+        background: none;
+  
+        margin-left: 15px;
+      }
+      span {
+        display: inline-block;
+  
+        margin-right: 15px;
+      }
+    }
+  }
+  
+  

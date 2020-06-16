@@ -1,0 +1,281 @@
+@import "reset";
+@import "colors";
+
+$h3: 1.2em;
+$p: 1em;
+
+body {
+  display: flex;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  
+	flex-direction: column;
+  background-color: $background-100;
+  font-family: "Nunito", sans-serif;
+  color: $text;
+  // font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+  margin: 15px;
+  font-size: $h3;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: $p;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  color: $text;
+}
+
+.material-icons {
+  color: $neutral-400;
+}
+::placeholder {
+  color: $neutral-400;
+}
+
+.header {
+  display: grid;
+  min-width: 320px;
+  height: 120px;
+  width: 100vw;
+  max-width: 100%;
+  grid-template-rows: 60px 2fr;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+}
+.nav {
+  grid-row: 1 1;
+  display: flex;
+
+  width: 100vw;
+  line-height: 60px;
+
+  background-color: $primary-100;
+  align-items: center;
+
+  &__menu,
+  &__search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+    align-items: center;
+    margin: 0 auto;
+
+    img {
+      vertical-align: middle;
+      max-height: 37px;
+    }
+  }
+}
+
+.filter {
+  width: 100vw;
+  max-width: 100%;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+}
+
+.search {
+  grid-row: 2 2;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.search-bar {
+  display: flex;
+  font-size: $h3;
+  flex: 1;
+  min-height: 45px;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: $background-100;
+  box-shadow: inset -4px -4px 11px $shadow-100, inset 4px 4px 11px $shadow-200;
+  border-radius: 24px;
+
+  &__input {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-height: 45px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    input {
+      display: inline-block;
+      border: none;
+      background: none;
+
+      margin-left: 15px;
+    }
+    span {
+      display: inline-block;
+
+      margin-right: 15px;
+    }
+  }
+}
+
+.category {
+  margin-left: 15px;
+}
+
+.categories-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  max-width: 1066px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1vw 0 1vw 0;
+  grid-template-areas: ". . . . .";
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  column-gap: 2rem;
+
+  div:last-child {
+    padding-right: 15px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__category {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    margin-right: 10px;
+    color: $text;
+
+    cursor: pointer;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    label {
+      position: relative;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    figure {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 75px;
+      min-width: 75px;
+
+      text-align: center;
+
+      background: $background-100;
+      box-shadow: -4px -4px 11px $shadow-100, 4px 4px 11px $shadow-200;
+      border-radius: 24px;
+
+      margin: 0 0 5px 0;
+    }
+  }
+}
+
+.ad {
+  height: 120px;
+  margin: 15px;
+
+  figure {
+    margin: 0;
+    padding: 0;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background: $background-100;
+    box-shadow: -4px -4px 11px $shadow-100, 4px 4px 11px $shadow-200;
+    border-radius: 24px;
+
+    img {
+      border-radius: 24px;
+      min-width: 120px;
+      min-height: 120px;
+      max-width: 120px;
+      max-height: 120px;
+    }
+  }
+
+  &__informations {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    height: 105px;
+    padding-top: 15px;
+    margin-right: 15px;
+    &__price {
+      margin-top: auto;
+      margin-bottom: 15px;
+      align-self: flex-end;
+      color: $primary-100;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      font-size: 1.44em;
+    }
+  }
+}
+
+footer {
+  margin-top: 30px;
+  background-color: $neutral-400;
+  
+  .infos {
+    margin: 15px;
+    padding: 15px;
+
+    p {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+  }
+}
